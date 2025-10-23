@@ -1,12 +1,16 @@
-import './App.css'
+// import './App.css'
+import './desktop.css'
+import Desktop from './Desktop'
 import Header from './Header'
 
 function App() {
 
   return (
     <>
-    <main>
-      <Header />
+    <main
+    >
+      {/* <Header /> */}
+      <Desktop />
     </main>
     </>
   )
