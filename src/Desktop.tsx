@@ -5,6 +5,7 @@ import { startIconDrag, startProfileDrag } from './utils/dragutils';
 import Navbar from './Navbar';
 import { ReactComponent as NewsIcon } from './assets/news.svg';
 import { ReactComponent as BookIcon } from './assets/book1.svg';
+import { ReactComponent as IntercomIcon } from './assets/intercom.svg';
 import BlogViewer from './BlogViewer';
 
 export default function Desktop() {
@@ -40,6 +41,9 @@ export default function Desktop() {
             {icon.name === 'Profile' && <FolderIcon />}
             {icon.name === 'Blog' && (
               <BookIcon style={{ height: '50px', width: '50px' }} />
+            )}
+            {icon.name === 'Contact' && (
+              <IntercomIcon style={{ height: '50px', width: '50px' }} />
             )}
             <div>{icon.name}</div>
           </div>
