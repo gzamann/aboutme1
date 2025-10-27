@@ -5,12 +5,13 @@ import { startIconDrag, startProfileDrag } from "./utils/dragutils";
 import Navbar from "./Navbar";
 
 export default function Desktop() {
-    const [profileVisible, setProfileVisible] = useState(false);
+    const [profileVisible, setProfileVisible] = useState(true);
     const iconRefs = useRef({});
     const profileRef = useRef(null);
     const icons = [
         { id: 1, name: "Profile", x: 50, y: 50 },
         { id: 2, name: "Documents", x: 150, y: 50 },
+        { id: 3, name: "Contact", x: 50, y: 150 },
     ];
 
     return (
@@ -24,7 +25,9 @@ export default function Desktop() {
                         ref={(el) => (iconRefs.current[icon.id] = el)}
                         style={{ left: icon.x, top: icon.y, position: "absolute" }}
                         onMouseDown={(e) => startIconDrag(e, icon.id, iconRefs.current[icon.id])}
-                        onDoubleClick={() => icon.name === "Profile" && setProfileVisible(true)}
+                        onDoubleClick={() => {
+                            icon.name === "Profile" && setProfileVisible(true)
+                        }}
                     >
                         <FolderIcon />
                         <div>{icon.name}</div>

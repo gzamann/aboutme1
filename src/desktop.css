@@ -14,9 +14,8 @@
 
 body {
   margin: 0;
-  font-family: "Share Tech Mono", monospace;
-  font-family: "Space Mono", monospace;
-  cursor: url('./assets/carrot.svg') 0 0, auto;
+  font-family: 'Space Mono', monospace;
+  cursor: url('./assets/cursor.svg') 0 0, auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -26,12 +25,9 @@ p {
 }
 
 main {
-  /* max-width: 720px; */
   min-height: 90vh;
-  /* padding: 20px; */
   margin: 0 auto;
-  color: #2B2202;
-  background: #CFE4C5;
+  background: #39495c;
   color: #000;
 }
 
@@ -39,24 +35,25 @@ section {
   margin: 2em 0;
 }
 
-.header {}
+.header {
+}
 
 .folder-icon {
-  color: #000;
+  color: #fff;
   width: min-content;
   display: flex;
   flex-direction: column;
   place-items: center;
 
   svg {
-    fill: #FBCF51;
+    fill: #fbcf51;
   }
 }
 
 .navbar {
   font-size: 12px;
   padding: 4px 8px;
-  background: linear-gradient(#EAEAE8, #C2C4C4);
+  background: linear-gradient(#eaeae8, #c2c4c4);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,59 +64,6 @@ section {
   }
 }
 
-/* ===== Profile Viewer Enhancements ===== */
-.profile-viewer {
-  position: absolute;
-  border: 2px solid #666;
-  box-shadow: 3px 3px 0 #222;
-  font-family: "Space Mono", monospace;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Header bar (drag handle) */
-.profile-header {
-  background: linear-gradient(#3a3a3a, #1c1c1c);
-  padding: 6px 10px;
-  cursor: move;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  border-bottom: 1px solid #444;
-}
-
-/* Close button */
-.profile-header .close-btn {
-  background: #444;
-  border: 1px solid #777;
-  color: #fff;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 16px;
-  font-family: inherit;
-  font-size: 14px;
-  padding: 0;
-}
-
-.profile-header .close-btn:hover {
-  background: #b00;
-  border-color: #900;
-}
-
-/* Inner content area */
-.profile-content {
-  padding: 10px;
-  background: #111;
-  color: #ccc;
-  flex: 1;
-  overflow: auto;
-  font-size: 13px;
-}
-
 .desktop-area {
   position: relative;
   width: 100vw;
@@ -127,16 +71,60 @@ section {
   overflow: hidden;
 }
 
+/* ===== Profile Viewer ===== */
 .profile-viewer {
   position: absolute;
   height: 400px;
   width: 400px;
-  background: black;
+  background: #ffffff;
+  color: #36353c;
   border: 1px solid #333;
   z-index: 10;
   display: flex;
   flex-direction: column;
   pointer-events: auto;
+  font-family: 'Space Mono', monospace;
+}
+
+@media (max-width: 600px) {
+  .profile-viewer {
+    width: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .profile-viewer {
+    width: 250px;
+  }
+}
+
+.profile-viewer hr {
+  border: none;
+  border-top: 1px dashed #444;
+  margin: 8px 0;
+}
+
+.tech-list {
+  max-width: 100%;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 4px;
+
+    svg {
+      height: 25px;
+      width: 25px;
+    }
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 12px;
+    }
+  }
 }
 
 .profile-header {
@@ -171,8 +159,6 @@ section {
 
 .profile-content {
   padding: 10px;
-  background: #111;
-  color: #ccc;
   flex: 1;
   overflow: auto;
   font-size: 13px;
