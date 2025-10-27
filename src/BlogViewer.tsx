@@ -13,7 +13,7 @@ const BlogViewer = ({ blogRef, setBlogVisible, startBlogDrag }) => {
     <div
       ref={blogRef}
       className='blog-viewer'
-      style={{ left: '150px', top: '200px' }}
+      style={{ left: '80px', top: '220px' }}
     >
       <div
         className='blog-header'

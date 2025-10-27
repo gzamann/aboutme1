@@ -78,8 +78,14 @@ section {
   position: absolute;
   height: 400px;
   width: 400px;
-  background: #ffffff;
-  color: #36353c;
+  /* background: #ffffff; */
+  background: url('./assets/bluepaper.webp') repeat;
+  background-size: 500px;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+  /* color: #36353c; */
+  color: #f6f0e8;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9);
   border: 1px solid #333;
   z-index: 10;
   display: flex;
@@ -174,6 +180,8 @@ section {
   width: 400px;
   background: url('./assets/oldpaper.webp') repeat;
   background-size: 500px;
+  background-color: rgba(0, 0, 0, 0.25);
+  background-blend-mode: multiply;
   color: #36353c;
   border: 1px solid #333;
   z-index: 10;
