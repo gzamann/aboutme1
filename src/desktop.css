@@ -15,7 +15,7 @@
 body {
   margin: 0;
   font-family: 'Space Mono', monospace;
-  cursor: url('./assets/cursor.svg') 0 0, auto;
+  cursor: url('./assets/icons/cursor.svg') 0 0, auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -79,13 +79,13 @@ section {
   height: 400px;
   width: 400px;
   /* background: #ffffff; */
-  background: url('./assets/bluepaper.webp') repeat;
-  background-size: 500px;
+  background: url('./assets/bg/pinnedpaper.webp') repeat;
+  background-size: cover;
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: multiply;
   /* color: #36353c; */
   color: #f6f0e8;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 0 rgba(120, 120, 120, 0.9);
   border: 1px solid #333;
   z-index: 10;
   display: flex;
@@ -166,10 +166,11 @@ section {
 }
 
 .profile-content {
-  padding: 10px;
+  padding: 10px 10px 10px 22px;
   flex: 1;
   overflow: auto;
-  font-size: 13px;
+  font-size: 14px;
+  align-content: flex-end;
 }
 
 /* Replace the existing blog-viewer related styles with these */
@@ -178,8 +179,8 @@ section {
   position: absolute;
   height: 500px;
   width: 400px;
-  background: url('./assets/oldpaper.webp') repeat;
-  background-size: 500px;
+  background: url('./assets/bg/greenpaper.webp') repeat;
+  background-size: 400px;
   background-color: rgba(0, 0, 0, 0.25);
   background-blend-mode: multiply;
   color: #36353c;
@@ -294,5 +295,103 @@ section {
 }
 
 .post a:hover {
+  text-decoration: underline;
+}
+
+.dfihighlight{
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #de5757;
+  box-shadow: 0px -16px 0px 0px #de575761 inset;
+
+  a{
+    color: unset;
+    text-decoration: none;
+  }
+}
+
+/* Contact Viewer Styles */
+.contact-viewer {
+  position: absolute;
+  height: 400px;
+  width: 350px;
+  background: url('./assets/bg/yellowenvelop.webp') repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.25);
+  background-blend-mode: multiply;
+  color: #36353c;
+  border: 1px solid #333;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+  font-family: 'Space Mono', monospace;
+}
+
+.contact-header {
+  background: linear-gradient(#3a3a3a, #1c1c1c);
+  color: #fff;
+  padding: 6px 10px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  border-bottom: 1px solid #444;
+}
+
+.contact-header .close-btn {
+  background: #444;
+  border: 1px solid #777;
+  color: #fff;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 16px;
+  text-align: center;
+  font-size: 14px;
+  padding: 0;
+}
+
+.contact-header .close-btn:hover {
+  background: #b00;
+  border-color: #900;
+}
+
+.contact-content {
+  padding: 20px;
+  flex: 1;
+  overflow: auto;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.contact-content h2 {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #36353c;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.contact-details {
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-details p {
+  margin: 0;
+  color: #36353c;
+}
+
+.contact-details a {
+  color: #2b5876;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-details a:hover {
+  color: #1a365d;
   text-decoration: underline;
 }

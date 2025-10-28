@@ -3,17 +3,19 @@ import FolderIcon from './FolderIcon';
 import ProfileViewer from './ProfileViewer';
 import { startIconDrag, startProfileDrag } from './utils/dragutils';
 import Navbar from './Navbar';
-import { ReactComponent as NewsIcon } from './assets/news.svg';
-import { ReactComponent as BookIcon } from './assets/book1.svg';
-import { ReactComponent as IntercomIcon } from './assets/intercom.svg';
+import { ReactComponent as BookIcon } from './assets/icons/book1.svg';
+import { ReactComponent as IntercomIcon } from './assets/icons/intercom.svg';
 import BlogViewer from './BlogViewer';
+import ContactExe from './ContactExe';
 
 export default function Desktop() {
   const [profileVisible, setProfileVisible] = useState(false);
   const [blogVisible, setBlogVisible] = useState(false);
+  const [contactVisible, setContactVisible] = useState(false);
   const iconRefs = useRef({});
   const profileRef = useRef(null);
   const blogRef = useRef(null);
+  const contactRef = useRef(null);
   const icons = [
     { id: 1, name: 'Profile', x: 50, y: 50 },
     { id: 2, name: 'Blog', x: 150, y: 50 },
@@ -36,6 +38,7 @@ export default function Desktop() {
             onDoubleClick={() => {
               icon.name === 'Profile' && setProfileVisible(true);
               icon.name === 'Blog' && setBlogVisible(true);
+              icon.name === 'Contact' && setContactVisible(true);
             }}
           >
             {icon.name === 'Profile' && <FolderIcon />}
@@ -60,6 +63,13 @@ export default function Desktop() {
             blogRef={blogRef}
             setBlogVisible={setBlogVisible}
             startBlogDrag={startProfileDrag}
+          />
+        )}
+        {contactVisible && (
+          <ContactExe
+            contactRef={contactRef}
+            setContactVisible={setContactVisible}
+            startContactDrag={startProfileDrag}
           />
         )}
       </div>

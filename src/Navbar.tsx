@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Computer from "./assets/computer.svg";
+import Computer from "./assets/icons/computer.svg";
 
 const Navbar = () => {
     const [time, setTime] = useState(new Date());
