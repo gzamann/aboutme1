@@ -7,11 +7,13 @@ import { ReactComponent as BookIcon } from './assets/icons/book1.svg';
 import { ReactComponent as IntercomIcon } from './assets/icons/intercom.svg';
 import BlogViewer from './BlogViewer';
 import ContactExe from './ContactExe';
+import WelcomeModal from './WelcomeModal';
 
 export default function Desktop() {
   const [profileVisible, setProfileVisible] = useState(false);
   const [blogVisible, setBlogVisible] = useState(false);
   const [contactVisible, setContactVisible] = useState(false);
+  const [welcomeVisible, setWelcomeVisible] = useState(true);
   const iconRefs = useRef({});
   const profileRef = useRef(null);
   const blogRef = useRef(null);
@@ -19,7 +21,7 @@ export default function Desktop() {
   const icons = [
     { id: 1, name: 'Profile', x: 50, y: 50 },
     { id: 2, name: 'Blog', x: 150, y: 50 },
-    { id: 3, name: 'Contact', x: 50, y: 150 },
+    { id: 3, name: 'Contact', x: 50, y: 140 },
   ];
 
   return (
@@ -73,6 +75,10 @@ export default function Desktop() {
           />
         )}
       </div>
+      <WelcomeModal 
+        isVisible={welcomeVisible}
+        onClose={() => setWelcomeVisible(false)}
+      />
     </>
   );
 }
