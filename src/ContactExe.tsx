@@ -5,7 +5,7 @@ const ContactExe = ({ contactRef, setContactVisible, startContactDrag }) => {
     <div
       ref={contactRef}
       className='contact-viewer'
-      style={{ left: '120px', top: '180px' }}
+      style={{ left: '100px', top: '180px' }}
     >
       <div
         className='contact-header'
