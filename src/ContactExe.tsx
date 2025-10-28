@@ -30,6 +30,12 @@ const ContactExe = ({ contactRef, setContactVisible, startContactDrag }) => {
             </a>
           </p>
           <p>
+            Linktree:{' '}
+            <a href="https://linktr.ee/gulshanwebdev" target="_blank" rel="noopener noreferrer">
+              linktr.ee/gulshanwebdev
+            </a>
+          </p>
+          <p>
             Dev.to:{' '}
             <a href="https://dev.to/gzamann" target="_blank" rel="noopener noreferrer">
               dev.to/gzamann

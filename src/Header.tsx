@@ -31,7 +31,36 @@ export const Header = () => {
     </section>
     <section className={styles.section}>
         <h1>Contact</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <div>
+          <p>
+            LinkedIn:{' '}
+            <a href="https://www.linkedin.com/in/gulshanwebdev/" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/gulshanwebdev
+            </a>
+          </p>
+          <p>
+            Email:{' '}
+            <a href="mailto:gulshanzamann@gmail.com">gulshanzamann@gmail.com</a>
+          </p>
+          <p>
+            GitHub:{' '}
+            <a href="https://github.com/gzamann" target="_blank" rel="noopener noreferrer">
+              github.com/gzamann
+            </a>
+          </p>
+          <p>
+            Linktree:{' '}
+            <a href="https://linktr.ee/gulshanwebdev" target="_blank" rel="noopener noreferrer">
+              linktr.ee/gulshanwebdev
+            </a>
+          </p>
+          <p>
+            Dev.to:{' '}
+            <a href="https://dev.to/gzamann" target="_blank" rel="noopener noreferrer">
+              dev.to/gzamann
+            </a>
+          </p>
+      </div>
     </section>
     </div>
 }

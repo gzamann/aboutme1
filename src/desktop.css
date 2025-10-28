@@ -27,8 +27,6 @@ p {
 main {
   min-height: 90vh;
   margin: 0 auto;
-  background: #007f7e;
-  color: #000;
 }
 
 section {
@@ -71,6 +69,8 @@ section {
   width: 100vw;
   height: calc(100vh - 30px);
   overflow: hidden;
+  background: #007f7e;
+  color: #000;
 }
 
 /* ===== Profile Viewer ===== */
