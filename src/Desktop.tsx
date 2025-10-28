@@ -37,10 +37,20 @@ export default function Desktop() {
             onMouseDown={(e) =>
               startIconDrag(e, icon.id, iconRefs.current[icon.id])
             }
+            onTouchStart={(e) =>
+              startIconDrag(e, icon.id, iconRefs.current[icon.id])
+            }
             onDoubleClick={() => {
               icon.name === 'Profile' && setProfileVisible(true);
               icon.name === 'Blog' && setBlogVisible(true);
               icon.name === 'Contact' && setContactVisible(true);
+            }}
+            onTouchEnd={(e) => {
+              if (e.changedTouches.length === 1) {
+                icon.name === 'Profile' && setProfileVisible(true);
+                icon.name === 'Blog' && setBlogVisible(true);
+                icon.name === 'Contact' && setContactVisible(true);
+              }
             }}
           >
             {icon.name === 'Profile' && <FolderIcon />}

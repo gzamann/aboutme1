@@ -11,6 +11,7 @@ const ProfileViewer = ({ profileRef, setProfileVisible, startProfileDrag }) => {
       <div
         className='profile-header'
         onMouseDown={(e) => startProfileDrag(e, profileRef.current)}
+        onTouchStart={(e) => startProfileDrag(e, profileRef.current)}
       >
         Profile Viewer
         <button className='close-btn' onClick={() => setProfileVisible(false)}>

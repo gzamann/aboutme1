@@ -5,11 +5,12 @@ const ContactExe = ({ contactRef, setContactVisible, startContactDrag }) => {
     <div
       ref={contactRef}
       className='contact-viewer'
-      style={{ left: '100px', top: '180px' }}
+      style={{ left: '70px', top: '180px' }}
     >
       <div
         className='contact-header'
         onMouseDown={(e) => startContactDrag(e, contactRef.current)}
+        onTouchStart={(e) => startContactDrag(e, contactRef.current)}
       >
         Contact Viewer
         <button className='close-btn' onClick={() => setContactVisible(false)}>

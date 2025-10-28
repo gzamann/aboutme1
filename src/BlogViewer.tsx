@@ -18,6 +18,7 @@ const BlogViewer = ({ blogRef, setBlogVisible, startBlogDrag }) => {
       <div
         className='blog-header'
         onMouseDown={(e) => startBlogDrag(e, blogRef.current)}
+        onTouchStart={(e) => startBlogDrag(e, blogRef.current)}
       >
         Blog Viewer
         <button className='close-btn' onClick={() => setBlogVisible(false)}>
