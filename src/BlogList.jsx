@@ -16,7 +16,7 @@ export const BlogList = () => {
             {postList.map(post => {
                 return <div className={styles['post-list-item']} key={post.id}>
                     <div>
-                        <p>{post.readable_publish_date} {new Date(post.published_at).getFullYear()}</p>
+                        <p>{post.readable_publish_date}</p>
                     </div>
                     <img src={post.social_image} alt={post.title} />
                     <div>
