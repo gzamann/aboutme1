@@ -18,36 +18,36 @@ const ContactExe = ({ contactRef, setContactVisible, startContactDrag }) => {
         </button>
       </div>
       <div className='contact-content'>
-        <h2>Contact Me</h2>
+        <h2>Contact</h2>
         <div className="contact-details">
           <p>
-            Email:{' '}
-            <a href="mailto:gulshanzamann@gmail.com">gulshanzamann@gmail.com</a>
+            Email:
           </p>
+          <a href="mailto:gulshanzamann@gmail.com">gulshanzamann@gmail.com</a>
           <p>
-            GitHub:{' '}
-            <a href="https://github.com/gzamann" target="_blank" rel="noopener noreferrer">
-              github.com/gzamann
-            </a>
+            GitHub:
           </p>
+          <a href="https://github.com/gzamann" target="_blank" rel="noopener noreferrer">
+            github.com/gzamann
+          </a>
           <p>
-            Linktree:{' '}
-            <a href="https://linktr.ee/gulshanwebdev" target="_blank" rel="noopener noreferrer">
-              linktr.ee/gulshanwebdev
-            </a>
+            Linktree:
           </p>
+          <a href="https://linktr.ee/gulshanwebdev" target="_blank" rel="noopener noreferrer">
+            linktr.ee/gulshanwebdev
+          </a>
           <p>
-            Dev.to:{' '}
-            <a href="https://dev.to/gzamann" target="_blank" rel="noopener noreferrer">
-              dev.to/gzamann
-            </a>
+            Dev.to:
           </p>
+          <a href="https://dev.to/gzamann" target="_blank" rel="noopener noreferrer">
+            dev.to/gzamann
+          </a>
           <p>
-            LinkedIn:{' '}
-            <a href="https://www.linkedin.com/in/gulshanwebdev/" target="_blank" rel="noopener noreferrer">
-              linkedin.com/in/gulshanwebdev
-            </a>
+            LinkedIn:
           </p>
+          <a href="https://www.linkedin.com/in/gulshanwebdev/" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/gulshanwebdev
+          </a>
         </div>
       </div>
     </div>

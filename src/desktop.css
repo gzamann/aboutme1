@@ -52,11 +52,12 @@ section {
 
 .navbar {
   font-size: 12px;
-  padding: 4px 8px;
+  padding: 5px 10px;
   background: linear-gradient(#eaeae8, #c2c4c4);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #000;
 
   img {
     height: 20px;
@@ -69,7 +70,9 @@ section {
   width: 100vw;
   height: calc(100vh - 30px);
   overflow: hidden;
-  background: #007f7e;
+  background-color: #346caa;
+  background: url('./assets/bg/spbg1.jpeg');
+  background-repeat: repeat;
   color: #000;
 }
 
@@ -166,6 +169,7 @@ section {
 }
 
 .profile-content {
+  color: color-mix(in srgb, salmon 40%, yellow 60%);
   padding: 10px 10px 10px 22px;
   flex: 1;
   overflow: auto;
@@ -193,6 +197,7 @@ section {
 }
 
 .blog-header {
+  color: #fff;
   padding: 6px 10px;
   cursor: move;
   display: flex;
@@ -304,107 +309,6 @@ section {
   }
 }
 
-/* Welcome Modal Styles */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.welcome-modal {
-  width: 500px;
-  background: url('./assets/bg/greenpaper.webp') repeat;
-  background-size: 400px;
-  background-color: rgba(255, 255, 255, 0.95);
-  background-blend-mode: soft-light;
-  border: 1px solid #333;
-  border-radius: 4px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.modal-header {
-  background: linear-gradient(#3a3a3a, #1c1c1c);
-  color: #fff;
-  padding: 8px 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  font-size: 14px;
-}
-
-.modal-content {
-  padding: 20px;
-  color: #36353c;
-}
-
-.modal-content h2 {
-  margin: 0 0 15px 0;
-  font-size: 18px;
-  color: #36353c;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.9);
-}
-
-.modal-content p {
-  margin: 10px 0;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.modal-content ul {
-  margin: 10px 0;
-  padding-left: 25px;
-  font-size: 14px;
-}
-
-.modal-content li {
-  margin: 5px 0;
-}
-
-.modal-actions {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
-}
-
-.continue-btn,
-.plain-btn {
-  padding: 8px 16px;
-  border: 1px solid #333;
-  border-radius: 3px;
-  cursor: pointer;
-  font-family: 'Space Mono', monospace;
-  font-size: 13px;
-  transition: all 0.2s ease;
-}
-
-.continue-btn {
-  background: #2b5876;
-  color: white;
-}
-
-.continue-btn:hover {
-  background: #1a365d;
-}
-
-.plain-btn {
-  background: #d5d5d5;
-  color: #333;
-}
-
-.plain-btn:hover {
-  background: #c5c5c5;
-}
-
 /* Contact Viewer Styles */
 .contact-viewer {
   position: absolute;
@@ -472,7 +376,7 @@ section {
   padding: 12px 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
 }
 
 .contact-details p {

@@ -8,6 +8,7 @@ import { ReactComponent as IntercomIcon } from './assets/icons/intercom.svg';
 import BlogViewer from './BlogViewer';
 import ContactExe from './ContactExe';
 import WelcomeModal from './WelcomeModal';
+import SignBoard from "./assets/icons/signboard.svg";
 
 export default function Desktop() {
   const [profileVisible, setProfileVisible] = useState(false);
@@ -22,6 +23,7 @@ export default function Desktop() {
     { id: 1, name: 'Profile', x: 50, y: 50 },
     { id: 2, name: 'Blog', x: 150, y: 50 },
     { id: 3, name: 'Contact', x: 50, y: 140 },
+    { id: 3, name: 'Website', x: 50, y: 240 },
   ];
 
   return (
@@ -59,6 +61,11 @@ export default function Desktop() {
             )}
             {icon.name === 'Contact' && (
               <IntercomIcon style={{ height: '50px', width: '50px' }} />
+            )}
+            {icon.name === 'Website' && (
+              <a href="/plain">
+                <img src={SignBoard} width={50} height={50} />
+              </a>
             )}
             <div>{icon.name}</div>
           </div>

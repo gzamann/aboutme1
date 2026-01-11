@@ -21,13 +21,8 @@ const WelcomeModal = ({ isVisible, onClose }: WelcomeModalProps) => {
         </div>
         <div className="modal-content">
           <h2>Desktop Theme Website</h2>
-          <p>👨‍💻 This is an interactive desktop-themed portfolio website (under construction).</p>
-          <p>🖱️ Double-click on the desktop icons to explore different sections:</p>
-          <ul>
-            <li>Profile - About me and my experience</li>
-            <li>Blog - My recent blog posts</li>
-            <li>Contact - Ways to reach me</li>
-          </ul>
+          <p>This is an interactive desktop style website.</p>
+          <p>Click on "view plain website" to see the boring one.</p>
           <div className="modal-actions">
             <button 
               className="continue-btn"

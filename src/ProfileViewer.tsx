@@ -19,12 +19,12 @@ const ProfileViewer = ({ profileRef, setProfileVisible, startProfileDrag }) => {
         </button>
       </div>
       <div className='profile-content'>
-        <p>Name: Gulshan (aka Mr Holmes)</p>
-        <p>Role: Frontend Developer</p>
-        <p>Location: Bengaluru, KA, India</p>
+        <p>Gulshan</p>
+        <p>Frontend Developer</p>
+        <p>Bengaluru, KA, India</p>
         <hr />
         <p>
-          About: A frontend developer working with 5+ year of experience
+          A frontend developer working with 5+ year of experience
           building modern web applications using React, Typescript, CSS and
           other frontend web tech.
           <br/>
