@@ -8,8 +8,8 @@ function App() {
     <BrowserRouter>
       <main>
         <Routes>
-          <Route path="/" element={<Desktop />} />
-          <Route path="/plain" element={<Header />} />
+          <Route path="/" element={<Header />} />
+          <Route path="/desktop" element={<Desktop />} />
         </Routes>
       </main>
     </BrowserRouter>
