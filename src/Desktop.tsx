@@ -63,7 +63,7 @@ export default function Desktop() {
               <IntercomIcon style={{ height: '50px', width: '50px' }} />
             )}
             {icon.name === 'Website' && (
-              <a href="/plain">
+              <a href="/">
                 <img src={SignBoard} width={50} height={50} />
               </a>
             )}

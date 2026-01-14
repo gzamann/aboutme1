@@ -1,18 +1,37 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import styles from './BlogList.module.css'
 
 export const BlogList = () => {
     const [postList, setPostList] = useState([])
+    const carouselRef = useRef(null)
+
     useEffect(() => {
         fetch('https://dev.to/api/articles?username=gzamann')
             .then(res => res.json())
-            .then(result => setPostList(result.slice(0, 4)))
+            .then(result => setPostList(result.slice(0, 6)))
     }, [])
+
+    const scroll = (direction) => {
+        if (carouselRef.current) {
+            const scrollAmount = 360
+            carouselRef.current.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            })
+        }
+    }
 
     if (!postList.length) return <></>
 
-    return <>
-        <section className={styles['post-list']}>
+    return <div className={styles.carouselContainer}>
+        <button
+            className={`${styles.carouselBtn} ${styles.carouselBtnLeft}`}
+            onClick={() => scroll('left')}
+            aria-label="Scroll left"
+        >
+            &#8249;
+        </button>
+        <section className={styles['post-list']} ref={carouselRef}>
             {postList.map(post => {
                 return <div className={styles['post-list-item']} key={post.id}>
                     <div>
@@ -28,7 +47,14 @@ export const BlogList = () => {
                 </div>
             })}
         </section>
-    </>
+        <button
+            className={`${styles.carouselBtn} ${styles.carouselBtnRight}`}
+            onClick={() => scroll('right')}
+            aria-label="Scroll right"
+        >
+            &#8250;
+        </button>
+    </div>
 }
 
 export default BlogList
