@@ -58,3 +58,11 @@ h6 {
     color: unset;
     text-decoration: none;
 }
+
+#text{
+    display: inline-block;
+  padding: 0 4px;
+  font-weight: 600;
+  background: #2660A4;
+  color: #EDF7F6;
+}

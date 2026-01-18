@@ -1,12 +1,79 @@
 import BlogList from "./BlogList"
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin'
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrambleTextPlugin);
+
 
 export const Header = () => {
+  const container = useRef(null);
+  useGSAP(() => {
+    gsap
+      .timeline({
+        delay: 1,
+        repeat: -1,
+        yoyo: true
+      })
+      .to("#text", 1, {
+        delay: 1,
+        scrambleText: {
+          text: "Typescript",
+          chars: "lowercase"
+        }
+      }).to("#text", 1, {
+        delay: 1,
+        scrambleText: {
+          text: "Nextjs",
+          chars: "lowercase"
+        }
+      }).to("#text", 1, {
+        delay: 1,
+        scrambleText: {
+          text: "Chartjs",
+          chars: "lowercase"
+        }
+      }).to("#text", 1, {
+        delay: 1,
+        scrambleText: {
+          text: "Echarts",
+          chars: "lowercase"
+        }
+      }).to("#text", 1, {
+        delay: 1,
+        scrambleText: {
+          text: "GraphQL",
+          chars: "lowercase"
+        }
+      }).to("#text", 1, {
+        delay: 1,
+        scrambleText: {
+          text: "Redux",
+          chars: "lowercase"
+        }
+      }).to("#text", 1, {
+        delay: 1,
+        scrambleText: {
+          text: "Javascript",
+          chars: "lowercase"
+        }
+      }).to("#text", 1, {
+        delay: 1,
+        scrambleText: {
+          text: "HTML",
+          chars: "lowercase"
+        }
+      });
+  }, { scope: container }); // <-- scope is for selector text (optional)
+
   return <div className="main-content">
     <section className="intro-section">
       <h1>Gulshan</h1>
       <div style={{ marginTop: "8px" }}></div>
-      <p className="text-content">
-        A front-end developer having 6+ years of experience building modern web applications using React, Typescript, CSS and
+      <p className="text-content" ref={container}>
+        A front-end developer having 6+ years of experience building modern web applications using <div id="text">React</div> and
         other front-end web tech.
         <br />
         Currently working at <span className="dfihighlight"><a href='https://www.dataforindia.com/' target='_blank'>Data For India</a></span>, where we are helping advance people's understanding of India through data and visualizations.
