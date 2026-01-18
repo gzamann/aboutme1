@@ -2,6 +2,7 @@ import './desktop.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Desktop from './Desktop'
 import Header from './Header'
+import './assets/css/common.css'
 
 function App() {
   return (

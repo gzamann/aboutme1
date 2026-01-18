@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Silkscreen&family=Space+Mono&display=swap');
+
+body {
+    background: beige;
+    color: #030303;
+    padding: 0 1em;
+}
+
+* {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Chango", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main-content {
+    margin: auto;
+    max-width: 1300px;
+}
+
+.intro-section h1 {
+    box-shadow: 0 -12px 0 0 #eab464cf inset;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: #F9E386;
+        box-shadow: 0 -32px 0 0 #2B2202 inset;
+    }
+}
+.intro-section p{
+    font-size: 1.25em;
+}
+
+.text-content {
+    max-width: 640px;
+    text-align: balanced;
+}
+
+.dfihighlight {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #26804a;
+    box-shadow: 0px -16px 0px 0px #4ea57130 inset;
+}
+
+.dfihighlight a {
+    color: unset;
+    text-decoration: none;
+}

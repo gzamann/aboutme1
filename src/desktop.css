@@ -8,14 +8,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  /* max-width: 1280px; */
-}
-
 body {
   margin: 0;
   font-family: 'Space Mono', monospace;
-  cursor: url('./assets/icons/cursor.svg') 0 0, auto;
+  /* cursor: url('./assets/icons/cursor.svg') 0 0, auto; */
   font-weight: 400;
   font-style: normal;
 }
@@ -31,9 +27,6 @@ main {
 
 section {
   margin: 2em 0;
-}
-
-.header {
 }
 
 .folder-icon {

@@ -1,48 +1,24 @@
 import BlogList from "./BlogList"
-import styles from './Header.module.css'
 
 export const Header = () => {
-    return <div className={styles.container}>
-    <section className={styles.header}>
-        <h1>Gulshan</h1>
-        <div style={{marginTop: "8px"}}></div>
-        <p>
-          A frontend developer working with 5+ year of experience
-          building modern web applications using React, Typescript, CSS and
-          other frontend web tech.
-          <br/>
-          Currently working at <span className={styles.dfihighlight}><a href='https://www.dataforindia.com/' target='_blank'>Data For India</a></span>, helping advance people's understanding of India through data stories with visualizations.
-        </p>
+  return <div className="main-content">
+    <section className="intro-section">
+      <h1>Gulshan</h1>
+      <div style={{ marginTop: "8px" }}></div>
+      <p className="text-content">
+        A front-end developer having 6+ years of experience building modern web applications using React, Typescript, CSS and
+        other front-end web tech.
+        <br />
+        Currently working at <span className="dfihighlight"><a href='https://www.dataforindia.com/' target='_blank'>Data For India</a></span>, where we are helping advance people's understanding of India through data and visualizations.
+      </p>
     </section>
 
-    <section className={styles.section}>
-        <h1>Projects</h1>
-        <div className={styles.projectsGrid}>
-          <a href="/desktop" className={styles.projectCard}>
-            <div className={styles.projectThumbnail}>
-              <div className={styles.desktopPreview}>
-                <div className={styles.previewNavbar}></div>
-                <div className={styles.previewIcons}>
-                  <div className={styles.previewIcon}></div>
-                  <div className={styles.previewIcon}></div>
-                  <div className={styles.previewIcon}></div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.projectInfo}>
-              <h3>Interactive Desktop</h3>
-              <p>A retro desktop-themed portfolio experience with draggable windows and icons</p>
-            </div>
-          </a>
-        </div>
-    </section>
-
-    <section className={styles.section}>
+    {/* <section className={styles.section}>
         <h1>Blog</h1>
         <BlogList />
-    </section>
+    </section> */}
 
-    <section className={styles.section}>
+    {/* <section className={styles.section}>
         <h1>Contact</h1>
         <div className={styles.contactCard}>
           <p className={styles.contactIntro}>Feel free to reach out for collaboration, questions, or just to say hello!</p>
@@ -69,8 +45,8 @@ export const Header = () => {
             </a>
           </div>
         </div>
-    </section>
-    </div>
+    </section> */}
+  </div>
 }
 
 export default Header
