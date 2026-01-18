@@ -14,8 +14,14 @@ export const Header = () => {
     gsap
       .timeline({
         delay: 1,
-        repeat: -1,
-        yoyo: true
+        repeat: -1
+      })
+      .to("#text", 1, {
+        delay: 1,
+        scrambleText: {
+          text: "CSS",
+          // chars: "uppercase"
+        }
       })
       .to("#text", 1, {
         delay: 1,
@@ -80,10 +86,10 @@ export const Header = () => {
       </p>
     </section>
 
-    {/* <section className={styles.section}>
-        <h1>Blog</h1>
+    <section className="blog-section">
+        <h2>Writings</h2>
         <BlogList />
-    </section> */}
+    </section>
 
     {/* <section className={styles.section}>
         <h1>Contact</h1>

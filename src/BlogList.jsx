@@ -24,36 +24,21 @@ export const BlogList = () => {
     if (!postList.length) return <></>
 
     return <div className={styles.carouselContainer}>
-        <button
-            className={`${styles.carouselBtn} ${styles.carouselBtnLeft}`}
-            onClick={() => scroll('left')}
-            aria-label="Scroll left"
-        >
-            &#8249;
-        </button>
         <section className={styles['post-list']} ref={carouselRef}>
             {postList.map(post => {
-                return <div className={styles['post-list-item']} key={post.id}>
-                    <div>
-                        <p>{post.readable_publish_date}</p>
+                return <div class="blog-card">
+                    <div class="blog-card-tags">{post.tag_list[0]}</div>
+                    <div class="blog-card-thumbnail">
+                        <img src={post.social_image} alt={post.title} />
                     </div>
-                    <img src={post.social_image} alt={post.title} />
-                    <div>
-                        <p>
-                            {post.description}
-                        </p>
+                    <div class="blog-card-content">
+                        <a href={post.canonical_url} target="_blank" rel="noopener noreferrer"><div class="blog-card-title">{post.title}</div></a>
+                        <div class="blog-card-desc">{post.description}</div>
                     </div>
-                    <div className={styles['read-post']}><a href={post.canonical_url} target="_blank" rel="noopener noreferrer">READ</a></div>
+                    <p class="blog-card-time">{post.readable_publish_date}</p>
                 </div>
             })}
         </section>
-        <button
-            className={`${styles.carouselBtn} ${styles.carouselBtnRight}`}
-            onClick={() => scroll('right')}
-            aria-label="Scroll right"
-        >
-            &#8250;
-        </button>
     </div>
 }
 
