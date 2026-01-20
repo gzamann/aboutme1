@@ -156,6 +156,8 @@ img {
     }
 
     & .footer-setallite {
+        position: absolute;
+        margin-top: -2.5em;
         & svg {
             height: 50px;
             width: 50px;
