@@ -8,7 +8,7 @@ export const BlogList = () => {
     useEffect(() => {
         fetch('https://dev.to/api/articles?username=gzamann')
             .then(res => res.json())
-            .then(result => setPostList(result.slice(0, 6)))
+            .then(result => setPostList(result.slice(0, 99)))
     }, [])
 
     const scroll = (direction) => {

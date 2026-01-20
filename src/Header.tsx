@@ -3,6 +3,13 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin'
 import { useGSAP } from '@gsap/react';
+import {ReactComponent as Satellite} from './assets/icons/1F6F0.svg';
+import {ReactComponent as Github} from './assets/icons/github.svg';
+import {ReactComponent as Dev} from './assets/icons/dev-badge.svg';
+import {ReactComponent as Linkedin} from './assets/icons/linkedin.svg';
+import {ReactComponent as Linktree} from './assets/icons/linktree.svg';
+import {ReactComponent as Mail} from './assets/icons/mail.svg';
+import {ReactComponent as Meteor} from './assets/icons/2604.svg';
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrambleTextPlugin);
@@ -74,7 +81,7 @@ export const Header = () => {
       });
   }, { scope: container }); // <-- scope is for selector text (optional)
 
-  return <div className="main-content">
+  return <><div className="main-content">
     <section className="intro-section">
       <h1>Gulshan</h1>
       <div style={{ marginTop: "8px" }}></div>
@@ -87,39 +94,39 @@ export const Header = () => {
     </section>
 
     <section className="blog-section">
-        <h2>Writings</h2>
-        <BlogList />
+      <h2>Writings</h2>
+      <BlogList />
     </section>
-
-    {/* <section className={styles.section}>
-        <h1>Contact</h1>
-        <div className={styles.contactCard}>
-          <p className={styles.contactIntro}>Feel free to reach out for collaboration, questions, or just to say hello!</p>
-          <div className={styles.contactLinks}>
-            <a href="mailto:gulshanzamann@gmail.com" className={styles.contactItem}>
-              <span className={styles.contactIcon}>✉</span>
-              <span>gulshanzamann@gmail.com</span>
-            </a>
-            <a href="https://www.linkedin.com/in/gulshanwebdev/" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
-              <span className={styles.contactIcon}>in</span>
-              <span>linkedin.com/in/gulshanwebdev</span>
-            </a>
-            <a href="https://github.com/gzamann" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
-              <span className={styles.contactIcon}>gh</span>
-              <span>github.com/gzamann</span>
-            </a>
-            <a href="https://dev.to/gzamann" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
-              <span className={styles.contactIcon}>dev</span>
-              <span>dev.to/gzamann</span>
-            </a>
-            <a href="https://linktr.ee/gulshanwebdev" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
-              <span className={styles.contactIcon}>lnk</span>
-              <span>linktr.ee/gulshanwebdev</span>
-            </a>
-          </div>
-        </div>
-    </section> */}
   </div>
+    <footer className="footer">
+      <span className="footer-setallite">
+        <Satellite />
+      </span>
+      {/* <span className="footer-meteor">
+        <Meteor />
+      </span> */}
+      <h1>Reach out</h1>
+      <p>Feel free to reach out for collaboration or to talk about CSS!</p>
+      <div style={{marginBottom: "16px"}}></div>
+      <div className="footer-links">
+        {/* <a href="mailto:gulshanzamann@gmail.com">
+          <Mail />
+        </a> */}
+        <a href="https://www.linkedin.com/in/gulshanwebdev/" target="_blank" rel="noopener noreferrer">
+        <Linkedin />
+        </a>
+        <a href="https://github.com/gzamann" target="_blank" rel="noopener noreferrer">
+        <Github />
+        </a>
+        <a href="https://dev.to/gzamann" target="_blank" rel="noopener noreferrer">
+        <Dev />
+        </a>
+        <a href="https://linktr.ee/gulshanwebdev" target="_blank" rel="noopener noreferrer">
+        <Linktree />
+        </a>
+      </div>
+    </footer>
+  </>
 }
 
 export default Header
