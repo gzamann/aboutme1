@@ -10,6 +10,8 @@ import {ReactComponent as Linkedin} from './assets/icons/linkedin.svg';
 import {ReactComponent as Linktree} from './assets/icons/linktree.svg';
 import {ReactComponent as Mail} from './assets/icons/mail.svg';
 import {ReactComponent as Meteor} from './assets/icons/2604.svg';
+import {ReactComponent as Speech} from './assets/icons/speech.svg';
+import {ReactComponent as Feather} from './assets/icons/1FAB6.svg';
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrambleTextPlugin);
@@ -87,14 +89,14 @@ export const Header = () => {
       <div style={{ marginTop: "8px" }}></div>
       <p className="text-content" ref={container}>
         A front-end developer having 6+ years of experience building modern web applications using <div id="text">React</div> and
-        other front-end web tech.
+        other web tech.
         <br />
-        Currently working at <span className="dfihighlight"><a href='https://www.dataforindia.com/' target='_blank'>Data For India</a></span>, where we are helping advance people's understanding of India through data and visualizations.
+        Currently at <span className="dfihighlight"><a href='https://www.dataforindia.com/' target='_blank'>Data For India</a></span>, where we are helping advance people's understanding of India through data and visualizations.
       </p>
     </section>
 
     <section className="blog-section">
-      <h2>Writings</h2>
+      <h2>Blog</h2>
       <BlogList />
     </section>
   </div>
