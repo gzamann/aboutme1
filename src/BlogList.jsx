@@ -26,17 +26,19 @@ export const BlogList = () => {
     return <div className={styles.carouselContainer}>
         <section className={styles['post-list']} ref={carouselRef}>
             {postList.map(post => {
-                return <div class="blog-card">
-                    <div class="blog-card-tags">{post.tag_list[0]}</div>
+                return <a className='blog-card-link' href={post.canonical_url} target="_blank" rel="noopener noreferrer">
+                    <div class="blog-card">
                     <div class="blog-card-thumbnail">
                         <img src={post.social_image} alt={post.title} />
                     </div>
-                    <div class="blog-card-content">
-                        <a href={post.canonical_url} target="_blank" rel="noopener noreferrer"><div class="blog-card-title">{post.title}</div></a>
-                        <div class="blog-card-desc">{post.description}</div>
+                    <div className="blog-card-tags">{post.tag_list[0]}</div>
+                    <div className="blog-card-content">
+                            <div className="blog-card-title">{post.title}</div>
+                        <div className="blog-card-desc">{post.description}</div>
+                        <p class="blog-card-time">{post.readable_publish_date}</p>
                     </div>
-                    <p class="blog-card-time">{post.readable_publish_date}</p>
                 </div>
+                </a>
             })}
         </section>
     </div>

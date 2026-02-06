@@ -111,9 +111,6 @@ export const Header = () => {
       <p>Feel free to reach out for collaboration or to talk about CSS!</p>
       <div style={{marginBottom: "16px"}}></div>
       <div className="footer-links">
-        {/* <a href="mailto:gulshanzamann@gmail.com">
-          <Mail />
-        </a> */}
         <a href="https://www.linkedin.com/in/gulshanwebdev/" target="_blank" rel="noopener noreferrer">
         <Linkedin />
         </a>
