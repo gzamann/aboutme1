@@ -141,6 +141,8 @@ img {
     padding: 2em 2em 4em 2em;
     /* background: rgb(237 181 38); */
     background: #84ACCE;
+    background: url("../bg/grassnightsky.jpeg");
+    background-size: contain;
     color: beige;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
