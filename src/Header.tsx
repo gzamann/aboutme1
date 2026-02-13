@@ -1,5 +1,5 @@
 import BlogList from "./BlogList"
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import gsap from 'gsap';
 import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin'
 import { useGSAP } from '@gsap/react';
@@ -8,10 +8,6 @@ import {ReactComponent as Github} from './assets/icons/github.svg';
 import {ReactComponent as Dev} from './assets/icons/dev-badge.svg';
 import {ReactComponent as Linkedin} from './assets/icons/linkedin.svg';
 import {ReactComponent as Linktree} from './assets/icons/linktree.svg';
-import {ReactComponent as Mail} from './assets/icons/mail.svg';
-import {ReactComponent as Meteor} from './assets/icons/2604.svg';
-import {ReactComponent as Speech} from './assets/icons/speech.svg';
-import {ReactComponent as Feather} from './assets/icons/1FAB6.svg';
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrambleTextPlugin);
@@ -83,7 +79,15 @@ export const Header = () => {
       });
   }, { scope: container }); // <-- scope is for selector text (optional)
 
-  return <><div className="main-content">
+  return <>
+    <nav>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/#blog">blog</a></li>
+        <li><a href="/#contact">contact</a></li>
+      </ul>
+    </nav>
+    <div className="main-content">
     <section className="intro-section">
       <h1>Gulshan</h1>
       <div style={{ marginTop: "8px" }}></div>
@@ -95,18 +99,15 @@ export const Header = () => {
       </p>
     </section>
 
-    <section className="blog-section">
+    <section id="blog" className="blog-section">
       <h2>Blog</h2>
       <BlogList />
     </section>
   </div>
-    <footer className="footer">
+    <footer id="contact" className="footer">
       <span className="footer-setallite">
         <Satellite />
       </span>
-      {/* <span className="footer-meteor">
-        <Meteor />
-      </span> */}
       <h1>Reach out</h1>
       <p>Feel free to reach out for collaboration or to talk about CSS!</p>
       <div style={{marginBottom: "16px"}}></div>

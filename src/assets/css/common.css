@@ -22,9 +22,28 @@ h6 {
     font-style: normal;
 }
 
+nav{
+    background: #eab464cf;
+    padding: 0.5em 0;
+
+    & ul{
+        max-width: 1200px;
+        display: flex;
+        gap: 2em;
+        list-style: none;
+        margin: auto;
+        padding: 0;
+
+        & a{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
 .main-content {
     margin: auto;
-    max-width: 1300px;
+    max-width: 1200px;
 }
 
 .intro-section h1 {
@@ -152,7 +171,7 @@ img {
     }
 
     &>* {
-        max-width: 1300px;
+        max-width: 1200px;
         margin: auto;
     }
 
@@ -210,7 +229,10 @@ img {
 }
 
 @media (max-width: 500px) {
-    .main-content {
+    nav{
+        padding-inline:1em;
+    }
+    .main-content{
         padding: 0 1em;
     }
     .footer-setallite{
