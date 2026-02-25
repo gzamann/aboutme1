@@ -96,6 +96,8 @@ export const Header = () => {
         other web tech.
         <br />
         Currently at <span className="dfihighlight"><a href='https://www.dataforindia.com/' target='_blank'>Data For India</a></span>, where we are helping advance people's understanding of India through data and visualizations.
+        <br />
+        I also like playing <span className="dfihighlight"><a href='https://www.youtube.com/@crtplayer1' target='_blank'>retro games</a></span> and travelling.
       </p>
     </section>
 
@@ -105,6 +107,7 @@ export const Header = () => {
     </section>
   </div>
     <footer id="contact" className="footer">
+      <div className='footer-content'>
       <span className="footer-setallite">
         <Satellite />
       </span>
@@ -124,6 +127,7 @@ export const Header = () => {
         <a href="https://linktr.ee/gulshanwebdev" target="_blank" rel="noopener noreferrer">
         <Linktree />
         </a>
+      </div>
       </div>
     </footer>
   </>
